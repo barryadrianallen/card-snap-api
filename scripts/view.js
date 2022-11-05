@@ -21,13 +21,13 @@ let View = {
     },
 
     hideCards: ()=> {
-        View.imgTagList[Model.firstCardLocation].src = "images/blue_back.png";
-        View.imgTagList[Model.secondCardLocation].src = "images/blue_back.png";
+        View.imgTagList[Model.firstCardLocation].src = "barryadrianallen.github.io/images/blue_back.png";
+        View.imgTagList[Model.secondCardLocation].src = "barryadrianallen.github.io/images/blue_back.png";
     },
 
     removeCards: ()=> {
-        View.imgTagList[Model.firstCardLocation].src = "images/gray_back.png";
-        View.imgTagList[Model.secondCardLocation].src = "images/gray_back.png";
+        View.imgTagList[Model.firstCardLocation].src = "barryadrianallen.github.io/images/gray_back.png";
+        View.imgTagList[Model.secondCardLocation].src = "barryadrianallen.github.io/images/gray_back.png";
     },
 
     startModalVisibility: ()=> {
