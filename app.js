@@ -17,11 +17,18 @@ window.onload = (event) => {
 
   newDealButton.addEventListener('click', () => {
     Controller.getCardImagesFromAPIData();
+    Model.nealDeal = true;
+    View.errorDisplay.innerText = "";
   });
 
   playBtn.addEventListener('click', () => {
-    Model.shuffledGameCards = Controller.shuffle(Model.unshuffledGameCards);
-    View.startModalVisibility();
+    if (Model.nealDeal === true) {
+      Model.shuffledGameCards = Controller.shuffle(Model.unshuffledGameCards);
+      View.startModalVisibility();
+    }else {
+      View.errorDisplay.innerText = "First select New Deal";
+    }
+    
   });
 
   playAgainBtn.addEventListener('click', () => {

@@ -38,7 +38,9 @@ let View = {
     gameOverModalVisibility: ()=> {
         gameOverModal.classList.toggle('hide-modal');
         gameOverModal.classList.toggle('show-modal');
-    }
+    },
+
+    errorDisplay: document.getElementById('error-display')
 }
 
 export default View;
