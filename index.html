@@ -5,39 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/modal.css">
     <title>Card API</title>
 </head>
 <body>
-    <h1>Card API</h1>
-    <button id="shuffleBtn">Shuffle Cards</button>
-    <button id="drawBtn">Draw Cards</button>
 
-    <div id="card-container">
-        <img src="" id="card1-img" class="show-card">
-        <img src="" id="card2-img" class="show-card">
-        <img src="" id="card3-img" class="show-card">
-        <img src="" id="card4-img" class="show-card">
-        <img src="" id="card5-img" class="show-card">
-        <img src="" id="card6-img" class="show-card">
-        <img src="" id="card7-img" class="show-card">
-        <img src="" id="card8-img" class="show-card">
-        <img src="" id="card9-img" class="show-card">
-        <img src="" id="card10-img" class="show-card">
-        <img src="" id="card11-img" class="show-card">
-        <img src="" id="card12-img" class="show-card">
-        <img src="" id="card13-img" class="show-card">
-        <img src="" id="card14-img" class="show-card">
-        <img src="" id="card15-img" class="show-card">
-        <img src="" id="card16-img" class="show-card">
-        <img src="" id="card17-img" class="show-card">
-        <img src="" id="card18-img" class="show-card">
-        <img src="" id="card19-img" class="show-card">
-        <img src="" id="card20-img" class="show-card">
-        <img src="" id="card21-img" class="show-card">
-        <img src="" id="card22-img" class="show-card">
-        <img src="" id="card23-img" class="show-card">
-        <img src="" id="card24-img" class="show-card">
-    </div>
+    <div id="centered-container">
+
+        <div id="card-container">
+            <img src="" id="card1-img" class="show-card">
+            <img src="" id="card2-img" class="show-card">
+            <img src="" id="card3-img" class="show-card">
+            <img src="" id="card4-img" class="show-card">
+            <img src="" id="card5-img" class="show-card">
+            <img src="" id="card6-img" class="show-card">
+            <img src="" id="card7-img" class="show-card">
+            <img src="" id="card8-img" class="show-card">
+            <img src="" id="card9-img" class="show-card">
+            <img src="" id="card10-img" class="show-card">
+            <img src="" id="card11-img" class="show-card">
+            <img src="" id="card12-img" class="show-card">
+            <img src="" id="card13-img" class="show-card">
+            <img src="" id="card14-img" class="show-card">
+            <img src="" id="card15-img" class="show-card">
+            <img src="" id="card16-img" class="show-card">
+            <img src="" id="card17-img" class="show-card">
+            <img src="" id="card18-img" class="show-card">
+            <img src="" id="card19-img" class="show-card">
+            <img src="" id="card20-img" class="show-card">
+            <img src="" id="card21-img" class="show-card">
+            <img src="" id="card22-img" class="show-card">
+            <img src="" id="card23-img" class="show-card">
+            <img src="" id="card24-img" class="show-card">
+        </div>
+
+    </div>   
+
+    <div id="start-modal" class="show-modal">  
+        <div class="modal-content">
+            <h1>Card Match</h1>
+            <button id="new-deal-btn" class="button">New Deal</button>
+            <button id="play-btn" class="button">Play</button>
+        </div>
+    </div> 
+    
+    <div id="game-over-modal" class="hide-modal">  
+        <div class="modal-content">
+            <h1>Game Over</h1>
+            <button id="play-again-btn" class="button">Play Again</button>
+        </div>
+    </div> 
 
     <script type="module" src="app.js"></script>
     <script type="module" src="/scripts/model.js"></script>

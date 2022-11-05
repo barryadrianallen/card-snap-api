@@ -23,8 +23,6 @@ let Controller = {
     },
 
     getCardImagesFromAPIData: () => {
-        console.log('deckID is ' + Model.deckID);
-        console.log("Card images are in array and unshuffled...");
         fetch(Model.apiDrawCardEndpoint)
         .then((res) => { return res.json()})
         .then((data) => {    
@@ -50,7 +48,6 @@ let Controller = {
     },
 
     pickCard: (cardLocation) => {
-        console.log(Model.cardGuess);
         if(Model.cardGuess == 0){
             View.revealCard1(cardLocation);
         }
@@ -66,7 +63,6 @@ let Controller = {
     checkForMatch: ()=> {
         if (Model.firstCardUrl == Model.secondCardUrl){
             View.removeCards();
-            console.log("match!");
             Model.cardGuess = 0;
             Model.cardsRemaining -= 2;
             Controller.checkGameState();
@@ -79,13 +75,8 @@ let Controller = {
 
     checkGameState: ()=> {
         if (Model.cardsRemaining == 0){
-            let reset = window.confirm("Game Over: Play again?");
-            if (reset){
-                Controller.resetGame();
-            }
-            else{
-                return;
-            }
+            Controller.resetGame();
+            View.gameOverModalVisibility();
         }
         else{
             return;
@@ -93,11 +84,8 @@ let Controller = {
     },
 
     resetGame: ()=> {
-        Model.deckID = "";
-        Model.apiDrawCardEndpoint = "";
         Model.cardsRemaining = 24;
-        Model.unshuffledGameCards = [];
-        Model.shuffledGameCards = [];
+        Model.shuffledGameCards = Controller.shuffle(Model.unshuffledGameCards);
         Model.firstCardUrl = "";
         Model.secondCardUrl = "";
         Model.cardGuess = 0;
