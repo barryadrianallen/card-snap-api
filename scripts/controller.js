@@ -5,7 +5,7 @@ let Controller = {
 
     resetCards: ()=> {
         for(let i=0; i<View.imgTagList.length; i++){
-            View.imgTagList[i].src = "../public/images/blue_back.png";
+            View.imgTagList[i].src = "barryadrianallen.github.io/images/blue_back.png";
         }
     },
 
