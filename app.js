@@ -17,12 +17,12 @@ window.onload = (event) => {
 
   newDealButton.addEventListener('click', () => {
     Controller.getCardImagesFromAPIData();
-    Model.nealDeal = true;
+    Model.newDeal = true;
     View.errorDisplay.innerText = "";
   });
 
   playBtn.addEventListener('click', () => {
-    if (Model.nealDeal === true) {
+    if (Model.newDeal === true) {
       Model.shuffledGameCards = Controller.shuffle(Model.unshuffledGameCards);
       View.startModalVisibility();
     }else {

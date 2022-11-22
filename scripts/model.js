@@ -1,5 +1,5 @@
 let Model = {
-    nealDeal: false,
+    newDeal: false,
     deckID: "",
     apiMainEndpoint: "https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=2",
     apiDrawCardEndpoint: "",
